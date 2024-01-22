@@ -16,84 +16,181 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
         }
         h1
         {
             text-align: center;
-            
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             margin: 1rem;
         }
-        td
+        .outer
         {
-          padding: 1rem;
-          font-size:larger;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        input
-        {
-          padding: 0.5rem;
+          
+          padding: 3rem;
           border:2px solid black;
+        }
+        input,select
+        {
+          width: 100%;
+          padding: 0.3rem;
+          height: 2rem;
+        }
+        textarea
+        {
+          width: 100%;
+          padding: 0.3rem;
+        }
+        .hobby
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          padding: 1rem;
+          border: 1px solid black;
+          margin:1rem 0rem;
+          
+        }
+        .name
+        {
+          margin: 1rem 0rem;
+        }
+        .each
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          
+        }
+        .btn
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+        p
+        {
+          font-size: 1.2rem;
+        }
+        input[type="submit"],input[type="reset"]
+        {
+          background-color: rgb(2, 2, 51);
+          color:white;
+          border: none;
           outline: none;
-          background-color: transparent;
+          border-radius: 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover,input[type="reset"]:hover
+        {
+           background-color: aqua;
+           color:black;
+           font-weight: 600;
+           border: 2px solid black;
+           border-radius: 0;
+        }
+        .info
+        {
+          position: absolute;
+          top: 0;
+          right: 0;
+           display: flex;
+           flex-direction: column;
+           justify-content: start;
+           align-items: start;
+           font-weight: 500;
+           margin: 1rem;
+           border: 1.5px solid black;
         }
     </style>
   </head>
   <body>
-    <h1>SignIn here</h1>
+    <div class="info">
+      <p>Name:Indranjana Chatterjee</p>
+      <p>Sec:A</p>
+      <p>Roll:26</p>
+      <p>Enrollment Number:12022002001025</p>
+    </div>
     <form action="">
-      <table>
-        <tr>
-          <td>Username:</td>
-          <td>
-            <input type="text" name="user" placeholder="Enter your name:" />
-          </td>
-        </tr>
-        <tr>
-          <td>Password:</td>
-          <td>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter password:"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>Email:</td>
-          <td>
-            <input type="email" name="email" placeholder="Enter Email:" />
-          </td>
-        </tr>
-        <tr>
-          <td>Gender:</td>
-          <td>
-            <input type="radio" name="male" />Male
-            <input type="radio" name="female" />Female
-            <input type="radio" name="others" />Others
-          </td>
-        </tr>
-        <tr>
-          <td>Contact No:</td>
-          <td>
-            <select>
-              <option value="+91" selected>+91</option>
-              <option value="+00">+00</option>
+      <div class="outer">
+        <div class="main">
+          <h1>Student Registration Form</h1>
+          <div class="name">
+            <p>First Name</p>
+            <input type="text" placeholder="Enter your first name:">
+          </div>
+          <div class="name">
+            <p>Last Name</p>
+            <input type="text" placeholder="Enter your last name:">
+          </div>
+          <div class="name">
+            <p>Date of Birth:</p>
+            <input type="date" placeholder="Enter your dob:">
+          </div>
+          <div class="name">
+            <p>Email Address:</p>
+            <input type="email" placeholder="Enter your email:">
+          </div>
+          <div class="name">
+            <p>Mobile:</p>
+            <input type="number" placeholder="Enter your mobile number:">
+          </div>
+          <div class="name">
+            <p>Gender:</p>
+            <select >
+              <option value="Male" selected>Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
             </select>
-            <input type="number" name="number" placeholder="88****" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="submit" value="Login" />
-          </td>
-          <td>
-            <p>
-              Already Registered?
-              <a href="Login.html">Sign Up Here</a>
-            </p>
-          </td>
-        </tr>
-      </table>
+          </div>
+          <div class="name">
+            <p>Address</p>
+            <textarea  cols="30" rows="10"></textarea>
+          </div>
+          <div class="name">
+            <p>City:</p>
+            <input type="text" >
+          </div>
+          <div class="name">
+            <p>State:</p>
+            <input type="text" >
+          </div>
+          <div class="name">
+            <p>Country:</p>
+            <input type="text" >
+          </div>
+          <div class="hobbies">
+            <p>Hobbies:</p>
+            <div class="hobby">
+              <div class="each">
+              <input type="radio" value="Singing" ><p>Singing</p>
+            </div>
+            <div class="each">
+              <input type="radio" value="Dancing" ><p>Dancing</p>
+            </div>
+            <div class="each">
+              <input type="radio" value="Reading" ><p>Reading</p>
+            </div>
+            <div class="each">
+              <input type="radio" value="Playing" ><p>Playing</p>
+            </div>
+            </div>
+          </div>
+          <div class="btn">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+          </div>
+
+        </div>
+      </div>
     </form>
   </body>
 </html>
